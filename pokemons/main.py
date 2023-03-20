@@ -134,35 +134,5 @@ class Combat:
             json.dump(pokedex, f, indent=4)
 
     
-    def jouer(self):
-        print(f"Le combat commence entre {self.pokemon1} et {self.pokemon2} !")
-        while not self.est_fini():
-            attaque_joueur = self.choisir_attaque()
-            attaque_adversaire = self.choisir_attaque()
-
-            if attaque_joueur == 1:
-                self.enlever_vies(self.joueur, self.adversaire)
-                print(f"{self.joueur.nom} attaque {self.adversaire.nom} !")
-            else:
-                print(f"{self.joueur.nom} rate son attaque !")
-
-            if attaque_adversaire == 1:
-                self.enlever_vies(self.adversaire, self.joueur)
-                print(f"{self.adversaire.nom} attaque {self.joueur.nom} !")
-            else:
-
-
-
-#pokemon1 = Pokemon("Pikachu", "électrique", 0, 100)
-#pokemon2 = Pokemon("Dracaufeu", "feu", 0, 100)
-
-
-p1 = Pokemon_eau("Pikachu")
-p2 = Pokemon_feu("Carapuce")
-
-p1.afficher_informations() 
-print('\n') 
-p2.afficher_informations()  
-
-combats = Combat(p1, p2)  
-combats.jouer()  
+    
+  
